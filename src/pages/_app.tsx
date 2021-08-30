@@ -65,6 +65,13 @@ function MyApp({ ...props }: AppProps) {
         />
       </Head>
       <Inner {...props} />
+      <form name="contact" data-netlify={true} netlify-honeypot="question" hidden>
+        <input type="text" name="name" />
+        <input type="text" name="contactNumber" />
+        <input type="email" name="email" />
+        <input type="text" name="companyName" />
+        <textarea name="message"></textarea>
+      </form>
       <script defer src="//my.visme.co/visme-embed.js" />
     </>
   )
