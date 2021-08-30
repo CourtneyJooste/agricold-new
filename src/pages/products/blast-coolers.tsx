@@ -34,6 +34,7 @@ import {
   GroupOutlined,
 } from '@ant-design/icons';
 import styled from 'styled-components';
+import { altText } from '../../helpers';
 
 const GraphContainer = styled.div`
   padding: 40px 10px 15px 10px;
@@ -95,7 +96,7 @@ export const BlastCoolers: FC<IProps> = ({}) => {
       </Container>
       <GraphContainer>
         <Zoom><h1>The difference that blast cooling makes</h1></Zoom>
-        <Zoom><img src={Graph} /></Zoom>
+        <Zoom><img src={Graph} alt={altText}/></Zoom>
       </GraphContainer>
       <Container centered width={'1200px'}>
         <Zoom><h1>Installations</h1></Zoom>

@@ -68,7 +68,7 @@ export const Navbar: FC<IProps> = ({ items, logo }) => {
   return (
     <NavOuter>
       <Navlogo className="logo" onClick={handleClick('/')}>
-        <img src={logo} alt={'logo'} />
+        <img src={logo} alt={'Agricold logo'} />
       </Navlogo>
       <Space />
       { width > 768 ? menu : (

@@ -29,6 +29,7 @@ import Product from '../components/Product';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 import { useRouter } from 'next/router';
+import { altText } from '../helpers';
 
 const Splash = styled.div`
   height: calc(100vh - 64px);
@@ -170,7 +171,7 @@ const Index: FC<IProps> = ({ }) => {
       <Splash>
         <SplashBack />
         <SplashContent>
-          <Image src={Logo} />
+          <Image src={Logo} alt={altText} />
           <Subtitle>Post Harvest Cooling Systems</Subtitle>
         </SplashContent>
         <Tooltip title={'Explore'}>
@@ -213,7 +214,7 @@ const Index: FC<IProps> = ({ }) => {
               temperature and humidity requirements of the product and application.
             </p>
           </Zoom>
-          <Fade><img src={Orange} style={{ width: '100%', height: 'auto' }}/></Fade>
+          <Fade><img src={Orange} width='100%' height='auto' alt={altText}/></Fade>
         </Container>
       </SolutionsContainer>
       {/*<Container width={'1200px'}>*/}
@@ -231,9 +232,9 @@ const Index: FC<IProps> = ({ }) => {
         <Row gutter={[8, 8]}>
           <Product onClick={handleProduct('cold-rooms')} image={Coldroom} title={'Cold Rooms & Freezer Rooms'} desc={'Horticultural, fruit, floricultural, meat and medical cold rooms. And much much more!'} reveal />
           <Product onClick={handleProduct('blast-coolers')} image={Blastcooler} title={'Blast Coolers & Blast Freezers'} desc={'Chilly Willy portable blast coolers. Plenum wall blast coolers. Pre and post coolers.'} reveal />
-          <Product onClick={handleProduct('high-humidity-coolers')} image={Humidity} title={'High Humidity & Misting Systems'} desc={'High humidity cooling systems for horticultural, floricultural and fruit applications.'} reveal />
+          <Product onClick={handleProduct('high-humidity')} image={Humidity} title={'High Humidity & Misting Systems'} desc={'High humidity cooling systems for horticultural, floricultural and fruit applications.'} reveal />
           <Product onClick={handleProduct('temperature-monitoring')} image={Monitoring} title={'Temperature Monitoring & Control'} desc={'Cold Guard Remote temperature monitoring & management system.'} reveal />
-          <Product onClick={handleProduct('pack-houses')} image={Packhouse} title={'Pack Houses & Process Areas'} desc={'Post harvest cooling technology.'} reveal />
+          <Product onClick={handleProduct('packhouses')} image={Packhouse} title={'Pack Houses & Process Areas'} desc={'Post harvest cooling technology.'} reveal />
           <Product onClick={handleProduct('all-products')} image={Products} title={'More Products...'} desc={'Supermarket refrigeration systems, abattoirs, water chillers, growing rooms, mortuary cabinets, solar refrigeration systems and more.'} reveal />
         </Row>
       </Container>

@@ -42,7 +42,7 @@ const navbarItems: NavItem[] = [
       { id: 'high-humidity', title: 'High Humidity & Misting Systems', route: '/products/high-humidity' },
       { id: 'temperature-monitoring', title: 'Temperature Monitoring and Control', route: '/products/temperature-monitoring' },
       { id: 'pack-houses', title: 'Pack Houses and Process Areas', route: '/products/packhouses' },
-      { id: 'product2', title: 'Service Department', route: '/products/service-departments' },
+      { id: 'product2', title: 'Service Departments', route: '/products/service-departments' },
       { id: 'product2', title: 'All Products', route: '/products/all-products' },
     ]},
   { id: 'partners', title: 'Partners', route: '/partners'},

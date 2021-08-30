@@ -7,6 +7,7 @@ import Fade from 'react-reveal/Fade';
 import { Col, Row } from 'antd';
 import styled from 'styled-components';
 import { CarOutlined, FieldTimeOutlined, FileDoneOutlined } from '@ant-design/icons';
+import { altText } from '../../helpers';
 
 const Image = styled.img`
   width: 96%;
@@ -76,7 +77,7 @@ export const ServiceDepartments: FC<IProps> = ({}) => {
           </Row>
         {/*</Fade>*/}
         <Zoom>
-          <Image src={Van} />
+          <Image src={Van} alt={altText}/>
         </Zoom>
       </Container>
       <Dark>
