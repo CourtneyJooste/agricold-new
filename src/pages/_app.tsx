@@ -56,12 +56,16 @@ function MyApp({ ...props }: AppProps) {
 
   return (
     <>
-      <meta
-        name="description"
-        content={altText}
-      />
+      <Head>
+        <title>Agricold | Post Harvest Cooling Systems</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content={altText}
+        />
+      </Head>
       <Inner {...props} />
-      <script src="//my.visme.co/visme-embed.js" />
+      <script defer src="//my.visme.co/visme-embed.js" />
     </>
   )
 }
@@ -97,10 +101,6 @@ const Inner = ({ Component, pageProps }: AppProps) => {
 
   return (
     <>
-      <Head>
-        <title>NectaTech Starter</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
       <ThemeProvider theme={theme}>
         <Layout style={{ height: '100%' }}>
           <Navbar items={navbarItems} logo={'/assets/logo-white.png'} />
