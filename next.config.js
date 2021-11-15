@@ -5,9 +5,9 @@ module.exports = withAntdLess({
   // optional
   modifyVars: {
     "@primary-color": "#222",
-    "@secondary-color": "#278232",
+    "@secondary-color": "#39749E",
     "@menu-bg": "#222",
-    "@link-color": "#278232",
+    "@link-color": "#39749E",
     "@menu-highlight-color": "#222",
     "@dropdown-selected-color": "#d0d0d0",
     "@menu-item-active-bg": "#cacaca",

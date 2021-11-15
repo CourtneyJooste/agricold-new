@@ -29,7 +29,7 @@ const Page = styled(Content)`
 // In styled component eg: color: ${p => p.theme.primary}
 const theme = {
   primary: '#222',
-  secondary: '#278232',
+  secondary: '#39749E',
   tertiary: '#DA252A',
   inverse: '#F0F2F5'
 }
