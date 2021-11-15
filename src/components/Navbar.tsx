@@ -41,7 +41,7 @@ const Space = styled.div`
 `;
 
 const Btn = styled(Button)`
-  //color: white !important;
+  color: white !important;
   height: 100%;
 `;
 
