@@ -10,7 +10,7 @@ import { NavItem } from '../hooks';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { altText } from '../helpers';
+import { altText, pageview } from '../helpers';
 require('../styles/global.less');
 
 const { Content } = Layout;
@@ -63,6 +63,22 @@ function MyApp({ ...props }: AppProps) {
           name="description"
           content={altText}
         />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
       </Head>
       <Inner {...props} />
       <form name="contact" data-netlify={true} netlify-honeypot="question" hidden>
@@ -83,14 +99,23 @@ const Inner = ({ Component, pageProps }: AppProps) => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => { //<-- this useEffect will be triggered just one time at component initialization
-    router.events.on("routeChangeStart", (url: string) => {
-      console.log("Route is changing");
-      setLoading(true)
-    });
-    router.events.on("routeChangeComplete", (url: string) => {
-      console.log("Route is changed");
-      setLoading(false)
-    });
+    const handleRouteStartChange = (url: string) => {
+      setLoading(true);
+    }
+
+    const handleRouteChange = (url: string) => {
+      setLoading(false);
+      pageview(url);
+    }
+
+    router.events.on("routeChangeStart", handleRouteStartChange);
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteStartChange);
+      router.events.off('routeChangeComplete', handleRouteChange);
+    }
   });
 
   useEffect(() => setLoading(false), [setLoading]);

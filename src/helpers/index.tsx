@@ -9,3 +9,4 @@ export const altText = 'Refrigeration systems, climate control products, blast c
   ' Leading specialists across Africa. Headquarters in South Africa, Zimbabwe and Zambia.';
 
 export * from './yup-helper';
+export * from './ga';
