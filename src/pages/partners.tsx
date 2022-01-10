@@ -41,7 +41,7 @@ const partners = [
   { img: Metraclark, title: 'Metraclark', desc: <Sub text={'Refrigeration & Air-conditioning wholesalers'} url={'www.metraclark.co.za/'} />},
   { img: FullGauge, title: 'Full Gauge', desc: <Sub text={'Temperature controls'} url={'www.fullgauge.com/'} /> },
   { img: Bitzer, title: 'Bitzer', desc: <Sub text={'Refrigeration Compressors'} url={'www.bitzer.de/'} /> },
-  { img: Dexion, title: 'Dexion', desc: <Sub text={'Racking and Shelving'} url={'www.dexionrackingandshelving.co.za'} /> },
+  // { img: Dexion, title: 'Dexion', desc: <Sub text={'Racking and Shelving'} url={'www.dexionrackingandshelving.co.za'} /> },
   { img: Genesis, title: 'Genesis Group', desc: <Sub text={'IT, Mining, Hospitality'} url={'www.genesis-group.biz'} /> },
   { img: Maxiflex, title: 'MaxiFlex', desc: <Sub text={'Strip curtains, dock levellers and docking solutions, high speed doors and industrial doors'} url={'www.maxiflex.co.za'} /> },
 ];
